@@ -1,0 +1,43 @@
+/*
+Author: Nickolas Reid
+Student ID: 3176950
+Course: COMP489
+
+Purpose: Acts as an interface to be implemented by the CORBA class P2PObject. When
+         A client makes a request to a clients listener server, the P2PObject decides
+         on what to do and gives the client feed back
+*/
+
+
+module Peer2Peer
+{
+  interface P2P
+  {
+    boolean registerIP(in string name,in string ip);
+    boolean registerFile(in string fileName,in string fileLocation, in string user);
+    boolean removeFile(in string fileName, in string userID);
+    string requestFile(in string fileName);
+    string requestFileList();
+    void deleteUser(in string userName);
+    string sendFile(in string fileName);
+    string filePath(in string serverName, in string fileName);
+    oneway void shutdown();
+    };
+};
+
+
+module Peer2Peer
+{
+  interface P2P
+  {
+    boolean registerIP(in string name,in string ip);
+    boolean registerFile(in string fileName,in string fileLocation, in string user);
+    boolean removeFile(in string fileName, in string userID);
+    string requestFile(in string fileName);
+    string requestFileList();
+    void deleteUser(in string userName);
+    string sendFile(in string fileName);
+    string filePath(in string serverName, in string fileName);
+    oneway void shutdown();
+    };
+};
